@@ -1,0 +1,181 @@
+/* GENERAL SET UP */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+    font-style: italic;
+}
+:root{
+    --white:#fafafa;
+    --obsidian:#0b1215;
+    --none:rgba(0,0,0,0);
+}
+html{
+    font-size: 62.5%;
+}
+body{
+    max-width: 1280px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: url('../img/background.jpg');
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+::placeholder{
+    color: var(--white);
+}
+::-webkit-scrollbar {
+    width: 0;
+}
+
+/* HEADER */
+.SkormJF{
+    color: var(--white);
+    font-weight: 900;
+    font-size: 3rem;
+}
+header nav {
+    border-radius: 0 0 25px 25px;
+    box-shadow: 0px 30px 50px -10px var(--white);
+    width: 100%;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background:linear-gradient(to right, rgb(0 0 0 / 1), rgb(0 0 0 / 0) ), url('../img/navbar.jpg');
+    background-size: cover;
+    background-position: center top;
+}
+.new_note{
+    background-color: rgba(0,0,0,0);
+    border: none;
+    width: 10%;
+    filter: drop-shadow(0px 0px 3px #ffff);
+}
+.note_icon{
+    width: 4rem;
+    height: 4rem;
+}
+.search_input{
+    width: 15%;
+    height: 50%;
+    text-align: center;
+    background-color:var(--none);
+    border: none;
+    font-size: 1.9rem;
+    font-weight: 900;
+    outline: none;
+    color: var(--white);
+}
+.search_input:focus{
+    border-bottom: 0.5rem double var(--obsidian);
+}
+
+/* MAIN */
+#root{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap-reverse;
+    width: 95%;
+    height: auto;
+    margin-top: 3rem;
+}
+.main_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 30%;
+    height: auto;
+    margin-bottom: 3rem;
+}
+.option_bar{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.btn_save,.btn_delete,.btn_update{
+    background-color: rgba(0,0,0,0);
+    border: none;
+    width: 20%;
+}
+.icon{
+    width: 3.5rem;
+    height: 3.5rem;
+    filter: drop-shadow(0px 0px 3px #ffff);
+}
+.title{
+    width: 40%;
+    text-align: center;
+    background-color:var(--none);
+    border: none;
+    font-size: 1.8rem;
+    font-weight: 900;
+    outline: none;
+    color: var(--white);
+}
+.textarea{
+    width: 90%;
+    background-color: rgba(0,0,0,0.5);
+    border: none;
+    text-align: left;
+    outline: none;
+    resize: none;
+    margin-top: 1%;
+    color: var(--white);
+    font-size: 1.5rem;
+    padding: 1.5rem;
+    border-radius: 2rem;
+}
+.textarea::-webkit-scrollbar{
+    width: 0px;
+}
+.content{
+    width: 90%;
+    height: auto;
+    text-align: left;
+    margin-top: 1%;
+    color: var(--white);
+    font-size: 1.5rem;
+    padding: 15px;
+    word-break:break-word;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2rem;
+}
+
+/* MODAL */
+.update_container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    margin-bottom: 3rem;
+}
+
+.modal{
+    border: none;
+    width: 50%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 0px 4rem var(--white), 0px 0px 1.5rem var(--white) inset;
+    background-color: rgba(255,255,255,0.7);
+    border-radius: 2.5rem;
+}
+
+.modal::backdrop{
+    background-color: rgba(0,0,0,0.3);
+}
