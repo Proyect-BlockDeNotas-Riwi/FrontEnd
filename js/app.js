@@ -1,5 +1,5 @@
 /* API CONST */
-const api = "http://localhost:5152/api/notes"
+const api = "http://localhost:5152/api/notes/"
 
 /* BUTTON CREATE NOTE TEMPLATE*/
 var new_note = document.querySelector('.new_note');
@@ -57,9 +57,9 @@ function save_note(id){
     /* MAKE IT THE ARRAY */
     let new_note = {
         Content: note.value,
-        title: title.value,
-        estado: "Activa",
-        user_Id: "1"
+        Title: title.value,
+        Estado: "Activa",
+        User_Id: "1"
     }
 
     /* SEND DATA WITH FETCH */
@@ -111,7 +111,7 @@ function notes(note){
                 </lord-icon>
             </button>
         </div>
-        <div class="content"><h4>${note.Content}</h4></div>
+        <div class="content"><h4>${note.note}</h4></div>
     </div>`
 
     counter++;
@@ -142,7 +142,7 @@ function edit(id){
     .then(d => {
         document.querySelector('#update_title').value = d.title;
         document.querySelector('#id').value = d.id;
-        document.querySelector('#update_content').value = d.note;
+        document.querySelector('#update_content').value = d.content;
     })
 ;}
 
@@ -165,7 +165,7 @@ function update(){
     /* MAKE THE ARRAY */
     let update_note = {
         title:title.value,
-        Content:note.value
+        note:note.value
     }
 
     /* SEND DATA WITH FETCH */
