@@ -56,7 +56,7 @@ function save_note(id){
 
     /* MAKE IT THE ARRAY */
     let new_note = {
-        content: note.value,
+        Content: note.value,
         title: title.value,
         estado: "Activa",
         user_Id: "1"
@@ -111,7 +111,7 @@ function notes(note){
                 </lord-icon>
             </button>
         </div>
-        <div class="content"><h4>${note.note}</h4></div>
+        <div class="content"><h4>${note.Content}</h4></div>
     </div>`
 
     counter++;
@@ -165,7 +165,7 @@ function update(){
     /* MAKE THE ARRAY */
     let update_note = {
         title:title.value,
-        note:note.value
+        Content:note.value
     }
 
     /* SEND DATA WITH FETCH */
